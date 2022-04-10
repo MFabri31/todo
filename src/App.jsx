@@ -1,5 +1,11 @@
+import Banner from "./components/Banner";
+
 const App = () => {
-  return <>Todo app</>;
+  return (
+    <>
+      <Banner />
+    </>
+  );
 };
 
 export default App;

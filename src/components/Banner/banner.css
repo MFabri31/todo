@@ -1,0 +1,23 @@
+.banner {
+  height: 25vh;
+  background-image: url(../../images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    height: 40vh;
+    background-image: url(../../images/bg-desktop-light.jpg);
+  }
+}
+
+.banner-icon {
+  width: 2.5rem;
+  height: 1.5rem;
+}
+
+.letter-spacing {
+  letter-spacing: 10px;
+}
