@@ -1,0 +1,12 @@
+.todo {
+  position: relative;
+  bottom: 5rem;
+  width: 21.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .todo {
+    bottom: 10rem;
+    width: 34.5rem;
+  }
+}
