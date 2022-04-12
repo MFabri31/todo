@@ -8,7 +8,7 @@ const TaskItem = ({ task }) => {
           variant="outline"
           className="me-3 p-2 rounded-circle shadow-none border"
         />
-        item {task}
+        {task}
       </Stack>
       <CloseButton className="shadow-none" />
     </ListGroup.Item>

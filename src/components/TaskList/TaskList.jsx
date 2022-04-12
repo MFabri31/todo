@@ -1,13 +1,15 @@
 import { ListGroup, Button } from "react-bootstrap";
 import TaskItem from "../TaskItem/TaskItem";
 
-const TaskList = () => {
+const TaskList = ({ tasks }) => {
   return (
     <>
       <ListGroup className="mt-2 ms-2 ms-md-4">
-        <TaskItem />
+        {tasks.map((elem) => (
+          <TaskItem key={elem.id} task={elem.task} />
+        ))}
         <ListGroup.Item className="d-flex justify-content-between shadow ">
-          <div className="text-black-50 fw-bold">5 items</div>
+          <div className="text-black-50 fw-bold">{tasks.length} items</div>
           <Button
             variant="link "
             className="shadow-none text-decoration-none text-black-50 fw-bold"
