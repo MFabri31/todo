@@ -13,10 +13,14 @@ const Todo = () => {
     dispatch({ type: TYPES.ADD_TASK, paylod: task });
   };
 
+  const deleteTask = (id) => {
+    dispatch({ type: TYPES.DELETE_TASK, payload: id });
+  };
+
   return (
     <Stack className="todo">
       <TaskForm addTask={addTask} />
-      <TaskList tasks={state.tasks} />
+      <TaskList tasks={state.tasks} deleteTask={deleteTask} />
     </Stack>
   );
 };

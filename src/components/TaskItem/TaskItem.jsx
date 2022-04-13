@@ -1,6 +1,6 @@
 import { CloseButton, Stack, Button, ListGroup } from "react-bootstrap";
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ id, task, deleteTask }) => {
   return (
     <ListGroup.Item className="d-flex justify-content-between">
       <Stack direction="horizontal" className="fw-bold text-black-50">
@@ -10,7 +10,7 @@ const TaskItem = ({ task }) => {
         />
         {task}
       </Stack>
-      <CloseButton className="shadow-none" />
+      <CloseButton className="shadow-none" onClick={() => deleteTask(id)} />
     </ListGroup.Item>
   );
 };

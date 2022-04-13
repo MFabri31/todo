@@ -1,12 +1,17 @@
 import { ListGroup, Button } from "react-bootstrap";
 import TaskItem from "../TaskItem/TaskItem";
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, deleteTask }) => {
   return (
     <>
       <ListGroup className="mt-2 ms-2 ms-md-4">
         {tasks.map((elem) => (
-          <TaskItem key={elem.id} task={elem.task} />
+          <TaskItem
+            key={elem.id}
+            id={elem.id}
+            task={elem.task}
+            deleteTask={deleteTask}
+          />
         ))}
         <ListGroup.Item className="d-flex justify-content-between shadow ">
           <div className="text-black-50 fw-bold">{tasks.length} items</div>
